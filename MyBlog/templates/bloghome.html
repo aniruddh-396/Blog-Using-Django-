@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h1>Welocome to  Byte Boss Blog </h1>
+{% for blog in blogs  %}
+
+{{blog.title}}
+<div class="container">
+<div class="media">
+    <img class="mr-3" src="https://source.unsplash.com/random/300x200/?java,python,technology" alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0">{{blog.title}}</h5>
+      {{blog.content}}
+    </div>
+    <button type="button" class="btn btn-primary">read More</button>
+
+  </div>
+
+
+
+{% endfor %}
+</div>
+{% endblock body %}
